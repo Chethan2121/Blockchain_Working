@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduChain - Blockchain Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-link"></i> EduChain</h1>
+            <p class="subtitle">Interactive Blockchain Visualizer</p>
+        </header>
+
+        <div class="menu">
+            <button onclick="addTransaction()" class="action-btn">
+                <i class="fas fa-plus-circle"></i> Add Transaction
+            </button>
+            <button onclick="mineBlock()" class="action-btn">
+                <i class="fas fa-hammer"></i> Mine Block
+            </button>
+            <button onclick="showChain()" class="action-btn">
+                <i class="fas fa-eye"></i> View Blockchain
+            </button>
+            <button onclick="validateChain()" class="action-btn">
+                <i class="fas fa-check-circle"></i> Validate Chain
+            </button>
+        </div>
+
+        <div id="output" class="output-container"></div>
+
+        <div class="blockchain-wrapper">
+            <div class="blockchain-header">
+                <h2><i class="fas fa-cubes"></i> Blockchain</h2>
+                <p class="blockchain-status">Current chain length: <span id="chain-length">0</span></p>
+            </div>
+            <div id="blockchain-visual" class="blockchain-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
